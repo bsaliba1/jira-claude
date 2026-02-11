@@ -26,6 +26,7 @@ func (g *GitHub) CreatePR(title, body, baseBranch string) (string, error) {
 		"--title", title,
 		"--body", body,
 		"--base", baseBranch,
+		"--draft",
 	}
 
 	cmd := exec.Command("gh", args...)
